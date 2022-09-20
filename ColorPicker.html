@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorPicker</title>
+</head>
+<body onload="onload()">
+    <div id="wrapper">
+        <p><a href = https://www.pivotaltracker.com/n/projects/2597602>Pivotal Tracker</a></p><br>
+        <p><a href = https://github.com/Bkain1/Color-Picker>GitHub Repository</a></p><br>
+        <form id="input">
+            <!-- Text entry -->
+            <p id="rText">Rho:</p>
+            <input type="text" id="rValue" name="rValue"><br><br>
+            
+            <p id="gText">Gamma:</p>
+            <input type="text" id="gValue" name="gValue"><br><br>
+
+            <p id="bText">Beta:</p>
+            <input type="text" id="bValue" name="bValue"><br><br>
+
+            <!-- RGB/Maxwell Hues Selector-->
+            <p>Convert to:</p>
+            <input type="radio" id="rgb" name="colorSelect" value="rgb" onclick="changeColor()" checked>
+            <label for="rgb">RGB</label><br><br>
+
+            <input type="radio" id="maxwell-hues" name="colorSelect" value="maxwell" onclick="changeColor()">
+            <label for="maxwell-hues">Barycentric Maxwell Hues (rho, gamma, beta)</label><br><br>
+        </form>
+        <input type="button" id="submitButton" value="Convert" onclick="submitForm()"><br><br>
+
+        <!-- Display window -->
+        <div id="colorDisplay">
+        </div>
+        <p id="convertedText"></p>
+    </div>
+</body>
+</html>
